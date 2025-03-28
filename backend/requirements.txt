@@ -1,0 +1,17 @@
+# api
+fastapi[standard]
+pydantic
+python-dotenv
+requests
+
+# data-creation
+yfinance
+tabula
+
+# llms
+google-generativeai
+google-genai
+groq
+
+#viz
+plotly

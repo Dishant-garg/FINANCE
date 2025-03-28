@@ -1,0 +1,148 @@
+,0
+address1,Yogakshema
+address2,"7th Floor, East Wing Jeevan Bima Marg Nariman Point"
+city,Mumbai
+zip,400021
+country,India
+phone,91 22 2202 2079
+website,https://www.licindia.in
+industry,Insurance - Life
+industryKey,insurance-life
+industryDisp,Insurance - Life
+sector,Financial Services
+sectorKey,financial-services
+sectorDisp,Financial Services
+longBusinessSummary,"Life Insurance Corporation of India provides life insurance products in India, Fiji, Mauritius, and the United Kingdom. It offers insurance plans, including endowment, whole life, term insurance plans, money back, and term assurance plans, as well as riders comprising accidental death and disability benefit, critical illness benefit, and premium waiver benefit riders. The company also provides pension, unit linked, micro insurance, withdrawal, and health plans, as well as various group schemes. Life Insurance Corporation of India was incorporated in 1956 and is based in Mumbai, India."
+fullTimeEmployees,98661
+companyOfficers,"[{'maxAge': 1, 'name': 'Mr. Siddhartha  Mohanty', 'age': 61, 'title': 'CEO, Chairman & MD', 'yearBorn': 1963, 'fiscalYear': 2024, 'totalPay': 9239000, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Tablesh  Pandey', 'age': 58, 'title': 'MD & Executive Director', 'yearBorn': 1966, 'fiscalYear': 2024, 'totalPay': 4999000, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. M  Jagannath', 'age': 59, 'title': 'MD & Director', 'yearBorn': 1965, 'fiscalYear': 2024, 'totalPay': 4804000, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Sat Pal Bhanoo', 'age': 58, 'title': 'MD & Director', 'yearBorn': 1966, 'fiscalYear': 2024, 'totalPay': 3665000, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Doraiswamy  Ramchandran', 'age': 57, 'title': 'MD & Director', 'yearBorn': 1967, 'fiscalYear': 2024, 'totalPay': 3161000, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Sunil  Agrawal', 'title': 'Chief Financial Officer', 'fiscalYear': 2024, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Ratnakar  Patnaik', 'title': 'Executive Director of Investment Front Office & Chief Investment Officer', 'fiscalYear': 2024, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Anshul Kumar Singh', 'title': 'Company Secretary & Compliance Officer', 'fiscalYear': 2024, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Sudhakar  Ravindranath', 'title': 'Executive Director of Marketing & Product Development and Chief Marketing Officer', 'fiscalYear': 2024, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Pradeep  Pandey', 'age': 51, 'title': 'Chief Digital Officer', 'yearBorn': 1973, 'fiscalYear': 2024, 'exercisedValue': 0, 'unexercisedValue': 0}]"
+compensationAsOfEpochDate,1735603200
+executiveTeam,[]
+maxAge,86400
+priceHint,2
+previousClose,786.85
+open,781.0
+dayLow,780.05
+dayHigh,805.95
+regularMarketPreviousClose,786.85
+regularMarketOpen,781.0
+regularMarketDayLow,780.05
+regularMarketDayHigh,805.95
+dividendRate,13.0
+dividendYield,1.65
+exDividendDate,1721347200
+payoutRatio,0.1469
+beta,0.477
+trailingPE,11.771232
+forwardPE,13.237773
+volume,1978182
+regularMarketVolume,1978182
+averageVolume,1101709
+averageVolume10days,1149310
+averageDailyVolume10Day,1149310
+bid,0.0
+ask,0.0
+marketCap,5067273928704
+fiftyTwoWeekLow,715.3
+fiftyTwoWeekHigh,1222.0
+priceToSalesTrailing12Months,0.5720971
+fiftyDayAverage,788.324
+twoHundredDayAverage,938.1157
+trailingAnnualDividendRate,2.0
+trailingAnnualDividendYield,0.0025417807
+currency,INR
+tradeable,False
+enterpriseValue,4775157956608
+profitMargins,0.0558
+floatShares,221374920
+sharesOutstanding,6325000192
+heldPercentInsiders,0.965
+heldPercentInstitutions,0.0113699995
+impliedSharesOutstanding,6353129984
+bookValue,154.367
+priceToBook,5.1899047
+lastFiscalYearEnd,1711843200
+nextFiscalYearEnd,1743379200
+mostRecentQuarter,1735603200
+earningsQuarterlyGrowth,0.104
+netIncomeToCommon,494209302528
+trailingEps,68.06
+forwardEps,60.52
+enterpriseToRevenue,0.539
+enterpriseToEbitda,8.85
+52WeekChange,-0.14113408
+SandP52WeekChange,0.08713734
+lastDividendValue,6.0
+lastDividendDate,1721347200
+quoteType,EQUITY
+currentPrice,801.15
+targetHighPrice,1350.0
+targetLowPrice,845.0
+targetMeanPrice,1070.381
+targetMedianPrice,1085.0
+recommendationMean,1.71429
+recommendationKey,buy
+numberOfAnalystOpinions,21
+totalCash,293902188544
+totalCashPerShare,46.467
+ebitda,539536883712
+totalDebt,0
+totalRevenue,8857366560768
+revenuePerShare,1400.375
+grossProfits,887827988480
+revenueGrowth,-0.049
+grossMargins,0.10024
+ebitdaMargins,0.06091
+operatingMargins,0.06508
+financialCurrency,INR
+symbol,LICI.NS
+language,en-US
+region,US
+typeDisp,Equity
+quoteSourceName,Delayed Quote
+triggerable,True
+customPriceAlertConfidence,HIGH
+shortName,LIFE INSURA CORP OF INDIA
+corporateActions,[]
+regularMarketTime,1743069603
+exchange,NSI
+messageBoardId,finmb_8033827
+exchangeTimezoneName,Asia/Kolkata
+exchangeTimezoneShortName,IST
+gmtOffSetMilliseconds,19800000
+market,in_market
+esgPopulated,False
+fiftyDayAverageChange,12.82605
+fiftyDayAverageChangePercent,0.016270023
+twoHundredDayAverageChange,-136.9657
+twoHundredDayAverageChangePercent,-0.14600086
+sourceInterval,15
+exchangeDataDelayedBy,15
+averageAnalystRating,1.7 - Buy
+cryptoTradeable,False
+marketState,PREPRE
+hasPrePostMarketData,False
+firstTradeDateMilliseconds,1652759100000
+regularMarketChange,14.300049
+regularMarketDayRange,780.05 - 805.95
+fullExchangeName,NSE
+averageDailyVolume3Month,1101709
+fiftyTwoWeekLowChange,85.85004
+fiftyTwoWeekLowChangePercent,0.12001962
+fiftyTwoWeekRange,715.3 - 1222.0
+fiftyTwoWeekHighChange,-420.84998
+fiftyTwoWeekHighChangePercent,-0.34439442
+fiftyTwoWeekChangePercent,-14.113408
+earningsTimestamp,1738925940
+earningsTimestampStart,1748257140
+earningsTimestampEnd,1748606400
+earningsCallTimestampStart,1738935000
+earningsCallTimestampEnd,1738935000
+isEarningsDateEstimate,True
+epsTrailingTwelveMonths,68.06
+epsForward,60.52
+epsCurrentYear,68.386
+priceEpsCurrentYear,11.715117
+longName,Life Insurance Corporation of India
+regularMarketChangePercent,1.8173794
+regularMarketPrice,801.15
+trailingPegRatio,

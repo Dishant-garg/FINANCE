@@ -1,0 +1,26 @@
+Business Analysis for INFY
+Generated on 2025-03-28
+
+Company Overview:
+---------------
+Company Name: Infosys Limited
+Industry: Information Technology Services
+Sector: Technology
+Website: https://www.infosys.com
+
+Business Description:
+------------------
+Infosys Limited, together with its subsidiaries, provides consulting, technology, outsourcing, and next-generation digital services in North America, Europe, India, and internationally. It provides digital marketing and digital workplace, digital commerce, digital experience and interactions, metaverse, data analytics and AI, applied AI, generative AI, sustainability, blockchain, engineering, Internet of Things, enterprise agile DevOps, application modernization, cloud, digital process automation, digital supply chain, Microsoft business application and cloud business, service experience transformation, energy transition, cyber security, and quality engineering solutions; Oracle, SAP, and Saleforce solutions; API economy and microservices; and Topaz, an AI-first set of services, solutions, and platforms using generative AI technologies. The company's products and platforms include Finacle, a core banking solution; Edge suite of products; Panaya platform, Infosys Equinox, Infosys Helix, Infosys Applied AI, Infosys Cortex, and Stater digital platforms; and Infosys McCamish, an insurance platform. It serves aerospace and defense, agriculture, automotive, chemical manufacturing, communication, consumer packaged goods, education, engineering procurement and construction, healthcare, high technology, industrial manufacturing, information services and publishing, insurance, life science, logistics and distribution, media, entertainment, mining, oil and gas, private equity, professional, public, retail, travel, hospitality, utilities, and waste management industries. The company was formerly known as Infosys Technologies Limited and changed its name to Infosys Limited in June 2011. Infosys Limited was incorporated in 1981 and is headquartered in Bengaluru, India.
+
+Market Position:
+--------------
+Market Cap: $77,351,305,216.00
+Full Time Employees: 323379
+Country: India
+
+Key Statistics:
+-------------
+52-Week High: $23.63
+52-Week Low: $16.04
+Average Volume: 10,594,865
+P/E Ratio: 23.632912

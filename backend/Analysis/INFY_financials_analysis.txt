@@ -1,0 +1,31 @@
+Financial Analysis for INFY
+Generated on 2025-03-28
+
+Revenue Analysis:
+----------------
+
+Latest Revenue: $nan
+Year-over-Year Growth: nan%
+Revenue Trend: Negative
+
+
+Profitability Analysis:
+----------------------
+
+Net Income: $nan
+Operating Income: $nan
+Profit Margin: nan%
+
+
+Balance Sheet Analysis:
+---------------------
+Unable to analyze balance sheet: 'Total Liabilities'
+
+Cash Flow Analysis:
+-----------------
+
+Operating Cash Flow: $nan
+Investing Cash Flow: $nan
+Financing Cash Flow: $nan
+Free Cash Flow: $nan
+

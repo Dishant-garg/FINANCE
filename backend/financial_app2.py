@@ -213,7 +213,7 @@ def home_page():
     st.markdown("### 🌟 Popular Tickers")
     col1, col2, col3 = st.columns(3)
     
-    featured_tickers = ["AAPL", "GOOGL", "MSFT"]
+    featured_tickers = ["HDB", "LICI.NS", "INFY"]
     for i, ticker in enumerate(featured_tickers):
         with locals()[f"col{i+1}"]:
             if st.button(f"{ticker} - {TICKER_MAPPING.get(ticker, ticker)}"):

@@ -28,7 +28,7 @@ def analyze_balance_sheet(ticker):
 
     try:
         # Load balance sheet data from CSV file
-        csv_file_path = f"Data/company_data/{ticker}/balance_sheet.csv"
+        csv_file_path = f"FINANCE/backend/Data/company_data/{ticker}/balance_sheet.csv"
         
         try:
             df = pd.read_csv(csv_file_path)

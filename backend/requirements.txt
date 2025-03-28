@@ -15,3 +15,5 @@ groq
 
 #viz
 plotly
+streamlit
+streamlit-option-menu

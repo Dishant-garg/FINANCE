@@ -78,7 +78,7 @@ class ChatResponseService:
 
             # Generate response using the complete prompt
             response = await model.generate_content_async(prompt)
-            print(response)
+            # print(response)
             if not response.text:
                 return "I apologize, but I couldn't generate a response."
             

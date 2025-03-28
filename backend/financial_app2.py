@@ -128,7 +128,7 @@ async def handle_chat_interaction(ticker, user_input):
             messages=[chatting.ChatMessage(role="user", content=user_input)]
         )
         response = await chat.ChatResponseService.chat_response(chat_history)
-        print(response)
+        # print(response)
         
         # Store conversation in session
         st.session_state.chat_history.append(("user", user_input))
@@ -487,7 +487,7 @@ def chat_page():
             if ADVANCED_FEATURES_AVAILABLE:
                 try:
                     # Add user message to history first
-                    st.session_state.chat_history.append(("user", user_input))
+                    # st.session_state.chat_history.append(("user", user_input))
                     
                     # Run the async function
                     response = asyncio.run(handle_chat_interaction(ticker, user_input))

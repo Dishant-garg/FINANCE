@@ -36,47 +36,44 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Ticker mapping for better display
-TICKER_MAPPING = {
-    "HDB": "HDFC Bank",
-    "INFY": "Infosys",
-    "LICI.NS": "LIC India",
-    "AAPL": "Apple Inc.",
-    "GOOGL": "Alphabet Inc.",
-    "MSFT": "Microsoft Corporation"
-}
+def get_ticker_dropdown(default_value=''):
+    """
+    Create a dropdown for selecting stock tickers with predefined options.
+    
+    Args:
+        default_value (str, optional): Default ticker to pre-select. Defaults to ''.
+    
+    Returns:
+        str: Selected ticker
+    """
+    TICKER_MAPPING = {
+        "HDB": "HDFC Bank",
+        "INFY": "Infosys",
+        "LICI.NS": "LIC India"
+    }
+    
+    # Create dropdown with full names for better readability
+    options = list(TICKER_MAPPING.keys())
+    display_options = [f"{ticker} - {TICKER_MAPPING[ticker]}" for ticker in options]
+    
+    # Find the default index
+    default_index = 0
+    if default_value in options:
+        default_index = options.index(default_value)
+    
+    # Dropdown selection
+    selected_display = st.selectbox(
+        "Select Stock Ticker", 
+        display_options, 
+        index=default_index
+    )
+    
+    # Extract the actual ticker from the selected display option
+    selected_ticker = selected_display.split(" - ")[0]
+    
+    return selected_ticker
 
-def load_css():
-    """Load custom CSS for the application."""
-    # st.markdown("""
-    # <style>
-    # .stApp {
-    #     background-color: #f0f2f6;
-    # }
-    # .reportview-container .markdown-text-container {
-    #     font-family: 'Arial', sans-serif;
-    # }
-    # .sidebar .sidebar-content {
-    #     background-color: #ffffff;
-    # }
-    # .chat-bubble {
-    #     padding: 10px;
-    #     border-radius: 10px;
-    #     margin-bottom: 10px;
-    #     max-width: 80%;
-    # }
-    # .chat-user {
-    #     background-color: #e1f5fe;
-    #     margin-left: auto;
-    #     margin-right: 0;
-    # }
-    # .chat-analyst {
-    #     background-color: #f0f4c3;
-    #     margin-left: 0;
-    #     margin-right: auto;
-    # }
-    # </style>
-    # """, unsafe_allow_html=True)
+
 
 def validate_ticker(ticker):
     """Validate the input ticker."""
@@ -224,9 +221,7 @@ def balance_sheet_page():
     """Page for Balance Sheet Analysis."""
     st.title("🏦 Balance Sheet Analysis")
     
-    ticker = st.text_input("Enter Stock Ticker", 
-                           value=st.session_state.get('selected_ticker', ''),
-                           placeholder="e.g., AAPL, GOOGL")
+    ticker = get_ticker_dropdown(st.session_state.get('selected_ticker', ''))
     
     if st.button("Analyze Balance Sheet") and validate_ticker(ticker):
         with st.spinner("Analyzing Balance Sheet..."):
@@ -247,9 +242,7 @@ def cash_flow_page():
     """Page for Cash Flow Analysis."""
     st.title("💸 Cash Flow Analysis")
     
-    ticker = st.text_input("Enter Stock Ticker", 
-                           value=st.session_state.get('selected_ticker', ''),
-                           placeholder="e.g., INFY, HDB")
+    ticker = get_ticker_dropdown(st.session_state.get('selected_ticker', ''))
     
     if st.button("Analyze Cash Flow") and validate_ticker(ticker):
         with st.spinner("Analyzing Cash Flow..."):
@@ -270,9 +263,7 @@ def financials_page():
     """Page for Financial Performance Analysis."""
     st.title("📈 Financial Performance")
     
-    ticker = st.text_input("Enter Stock Ticker", 
-                           value=st.session_state.get('selected_ticker', ''),
-                           placeholder="e.g., MSFT, GOOGL")
+    ticker = get_ticker_dropdown(st.session_state.get('selected_ticker', ''))
     
     if st.button("Analyze Financials") and validate_ticker(ticker):
         with st.spinner("Analyzing Financial Performance..."):
@@ -293,9 +284,7 @@ def key_stats_page():
     """Page for Key Statistics Analysis."""
     st.title("📊 Key Financial Statistics")
     
-    ticker = st.text_input("Enter Stock Ticker", 
-                           value=st.session_state.get('selected_ticker', ''),
-                           placeholder="e.g., AAPL, INFY")
+    ticker = get_ticker_dropdown(st.session_state.get('selected_ticker', ''))
     
     if st.button("Analyze Key Statistics") and validate_ticker(ticker):
         with st.spinner("Analyzing Key Statistics..."):
@@ -316,9 +305,7 @@ def company_story_page():
     """Page for Company Story Generation."""
     st.title("📖 Company Story")
     
-    ticker = st.text_input("Enter Stock Ticker", 
-                           value=st.session_state.get('selected_ticker', ''),
-                           placeholder="e.g., HDB, LICI.NS")
+    ticker = get_ticker_dropdown(st.session_state.get('selected_ticker', ''))
     
     if st.button("Generate Company Story") and validate_ticker(ticker):
         with st.spinner("Generating Company Story..."):

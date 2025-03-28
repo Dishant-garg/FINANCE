@@ -494,9 +494,6 @@ def main():
     # Initialize session state
     initialize_session_state()
     
-    # Load custom CSS
-    load_css()
-    
     # Check for API key at startup
     api_key = os.getenv("GROQ_API_KEY")
     if not api_key:

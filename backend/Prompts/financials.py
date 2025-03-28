@@ -81,7 +81,7 @@ def analyze_financials(ticker):
         ]
 
         # Build file path for the financials CSV file using the ticker
-        csv_file_path = f"Data/company_data/{ticker}/financials.csv"
+        csv_file_path = f"backend/Data/company_data/{ticker}/financials.csv"
         
         # Try reading the CSV file
         try:

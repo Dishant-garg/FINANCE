@@ -73,7 +73,7 @@ def analyze_cash_flow(ticker):
         ]
 
         # Build file path for the cash flow CSV file using the ticker
-        csv_file_path = f"Data/company_data/{ticker}/cash_flow.csv"
+        csv_file_path = f"backend/Data/company_data/{ticker}/cash_flow.csv"
         
         try:
             df = pd.read_csv(csv_file_path)

@@ -43,7 +43,7 @@ def analyze_key_stats(ticker):
 
     try:
         # Build the file path for the key statistics CSV file using the ticker
-        csv_file_path = f"Data/company_data/{ticker}/company_info.csv"
+        csv_file_path = f"backend/Data/company_data/{ticker}/company_info.csv"
 
         # Load the key statistics data from the CSV file
         df = pd.read_csv(csv_file_path)

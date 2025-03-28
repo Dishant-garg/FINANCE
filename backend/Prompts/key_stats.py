@@ -15,30 +15,31 @@ def analyze_key_stats(ticker):
     
     # Define the AI prompt for key statistics analysis
     prompt = """
-    You are a financial analyst who explains company financial health in simple, everyday language. Given the key financial statistics of a company, analyze them and provide clear insights into the company's future performance, risks, and investment potential. Avoid technical jargon and use practical comparisons to make the analysis easy to understand.
-    
+    You are a financial analyst who explains company financial health in simple, everyday language. Given the key financial statistics of a company, analyze them and provide clear insights into the company’s future performance, risks, and investment potential. Avoid technical jargon and use practical comparisons to make the analysis easy to understand.
+
     ### Key Areas to Analyze:
-    
+
     #### 1. Market Valuation (How Much is the Company Worth?)
-    - Examine **Market Capitalization and Enterprise Value** to understand the company's overall market size and investor perception.
-    
+    - Examine **Market Capitalization and Enterprise Value** to understand the company’s overall market size and investor perception.
+
     #### 2. Profitability (Is the Company Generating Sustainable Profits?)
-    - Analyze **Revenue, Gross Profit, Net Income, and EBITDA** to assess the company's ability to generate earnings.
-    
+    - Analyze **Revenue, Gross Profit, Net Income, and EBITDA** to assess the company’s ability to generate earnings.
+
     #### 3. Efficiency (How Well is the Company Managing Costs?)
     - Look at **Operating Margin, Profit Margin, Return on Assets (ROA), and Return on Equity (ROE)** to determine if the company is maximizing profits efficiently.
-    
+
     #### 4. Financial Stability (Is the Company at Risk?)
     - Review **Debt-to-Equity Ratio, Current Ratio, Quick Ratio, and Interest Coverage Ratio** to understand how well the company manages its debts and financial obligations.
-    
+
     #### 5. Growth Potential (Will the Company Expand?)
     - Examine **Revenue Growth and Earnings Per Share (EPS) Growth** to determine if the company is growing and increasing shareholder value.
-    
+
     #### 6. Stock Performance (How Attractive is the Company for Investors?)
     - Assess **Price-to-Earnings (P/E) Ratio, Price-to-Book (P/B) Ratio, Dividend Yield, and Beta** to evaluate stock valuation, investor returns, and risk levels.
-    
+
     ### Final Output:
-    Provide a clear and concise summary of the company's financial health. Highlight its strengths, weaknesses, and future potential in a way that is easy for a non-expert to understand. Help them decide if the company is financially strong, risky, or a good investment opportunity.
+    Provide a clear and concise summary of the company’s financial health. Highlight its strengths, weaknesses, and future potential in a way that is easy for a non-expert to understand. Help them decide if the company is financially strong, risky, or a good investment opportunity.
+    
     """
 
     try:

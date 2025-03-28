@@ -47,7 +47,8 @@ def analyze_financials(ticker):
     - Look at **Selling and Marketing Expense and Total Revenue Growth** to determine if the company is staying competitive and expanding.
 
     ### Final Output:
-    Provide a clear, easy-to-understand summary of the company's financial health. Highlight key strengths, weaknesses, and potential risks with practical explanations. Help an everyday person determine whether the company is financially strong or facing challenges.
+    Provide a clear, easy-to-understand summary of the company’s financial health. Highlight key strengths, weaknesses, and potential risks with practical explanations. Help an everyday person determine whether the company is financially strong or facing challenges.
+    
     """
 
     try:

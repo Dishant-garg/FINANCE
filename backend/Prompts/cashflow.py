@@ -15,42 +15,43 @@ def analyze_cash_flow(ticker):
     
     try:
         # Define the AI prompt for cash flow analysis
-        cf_prompt = """
+        cf_prompt = """ 
         You are a financial expert who explains company financial health in simple, everyday language. Given the cash flow statement of a company, analyze it and provide clear insights into its financial stability and future prospects. Avoid technical jargon and use real-world comparisons to make it easy for anyone to understand.
 
-        ### Key Areas to Analyze:
+    ### Key Areas to Analyze:
 
-        #### 1. Cash Flow Sustainability (Can the Company Sustain Itself?)
-        - Look at **Free Cash Flow (FCF)** to see if the company has money left after expenses. A positive FCF means the company can grow, pay off debt, or return value to shareholders. A negative FCF might indicate financial struggles.
+    #### 1. Cash Flow Sustainability (Can the Company Sustain Itself?)
+    - Look at **Free Cash Flow (FCF)** to see if the company has money left after expenses. A positive FCF means the company can grow, pay off debt, or return value to shareholders. A negative FCF might indicate financial struggles.
 
-        #### 2. Debt and Financial Risk (Is the Company Overburdened?)
-        - Check **Debt Repayments vs. New Borrowings** to see if the company is reducing or increasing its debt. A company constantly borrowing more money could be in financial trouble.
+    #### 2. Debt and Financial Risk (Is the Company Overburdened?)
+    - Check **Debt Repayments vs. New Borrowings** to see if the company is reducing or increasing its debt. A company constantly borrowing more money could be in financial trouble.
 
-        #### 3. Investment in Growth (Is the Company Expanding?)
-        - Look at **Capital Expenditure (CapEx)** to determine if the company is reinvesting in new projects, facilities, or technology. If CapEx is low, the company might not be investing in its future.
+    #### 3. Investment in Growth (Is the Company Expanding?)
+    - Look at **Capital Expenditure (CapEx)** to determine if the company is reinvesting in new projects, facilities, or technology. If CapEx is low, the company might not be investing in its future.
 
-        #### 4. Liquidity (Does the Company Have Enough Cash to Operate?)
-        - Analyze **End Cash Position and Changes in Cash** to check if the company has enough liquidity to handle its expenses. A declining cash position could mean financial stress.
+    #### 4. Liquidity (Does the Company Have Enough Cash to Operate?)
+    - Analyze **End Cash Position and Changes in Cash** to check if the company has enough liquidity to handle its expenses. A declining cash position could mean financial stress.
 
-        #### 5. Profitability (Is the Business Generating Enough Cash?)
-        - Look at **Net Income from Continuing Operations** to assess how profitable the core business activities are. If income is growing but cash flow is declining, the company might struggle to collect payments.
+    #### 5. Profitability (Is the Business Generating Enough Cash?)
+    - Look at **Net Income from Continuing Operations** to assess how profitable the core business activities are. If income is growing but cash flow is declining, the company might struggle to collect payments.
 
-        #### 6. Operational Efficiency (Is the Company Managing Finances Well?)
-        - Check **Changes in Inventory and Receivables** to see if the company is overproducing products or having trouble collecting payments from customers.
+    #### 6. Operational Efficiency (Is the Company Managing Finances Well?)
+    - Check **Changes in Inventory and Receivables** to see if the company is overproducing products or having trouble collecting payments from customers.
 
-        #### 7. Asset Depreciation (How Much Value Is Being Lost?)
-        - Look at **Depreciation and Amortization** to understand how the company's assets are losing value over time. High depreciation can reduce profits but might provide tax benefits.
+    #### 7. Asset Depreciation (How Much Value Is Being Lost?)
+    - Look at **Depreciation and Amortization** to understand how the company’s assets are losing value over time. High depreciation can reduce profits but might provide tax benefits.
 
-        #### 8. Employee Compensation Strategy (Is the Company Relying on Stock Payments?)
-        - Analyze **Stock-Based Compensation** to determine if the company is paying employees with stock instead of cash. Too much stock-based compensation can reduce shareholder value.
+    #### 8. Employee Compensation Strategy (Is the Company Relying on Stock Payments?)
+    - Analyze **Stock-Based Compensation** to determine if the company is paying employees with stock instead of cash. Too much stock-based compensation can reduce shareholder value.
 
-        #### 9. Currency Risks (Is Foreign Exchange Impacting the Company?)
-        - Check **Net Foreign Currency Exchange Gains/Losses** to see if international operations are affecting financial performance.
+    #### 9. Currency Risks (Is Foreign Exchange Impacting the Company?)
+    - Check **Net Foreign Currency Exchange Gains/Losses** to see if international operations are affecting financial performance.
 
-        ### Final Output:
-        Provide a simple and easy-to-understand summary of the company's cash flow situation. Highlight strengths, weaknesses, and risks using practical, non-technical explanations. Help an everyday person determine whether the company is financially stable or facing challenges.
+    ### Final Output:
+    Provide a simple and easy-to-understand summary of the company’s cash flow situation. Highlight strengths, weaknesses, and risks using practical, non-technical explanations. Help an everyday person determine whether the company is financially stable or facing challenges.
+    
         """
-
+        
         # Define important cash flow metrics
         important_metrics_cash_flow = [
             "Free Cash Flow",

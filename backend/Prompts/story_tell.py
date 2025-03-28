@@ -41,31 +41,76 @@ def generate_company_story(ticker):
         
         # Define the AI prompt for storytelling
         story_prompt = """
-        You are a financial storyteller who transforms complex financial analyses into engaging, easy-to-understand narratives. Given multiple financial analyses for a company, create a cohesive company story that captures its financial journey, current position, and future outlook.
+        You are a financial analyst who explains company performance in a simple, engaging storytelling format. Given a company's financial data, generate a compelling story that highlights its rise, challenges, and future outlook in a way that is easy to understand. Avoid technical jargon and focus on clear, real-world comparisons.
 
-        ### Your Task:
-        1. Synthesize the various analyses into a flowing narrative.
-        2. Highlight key strengths, challenges, and opportunities facing the company.
-        3. Use concrete examples and real-world comparisons to explain financial concepts.
-        4. Avoid technical jargon - write as if explaining to someone with no financial background.
-        5. Create a story with a clear beginning (company history and past performance), middle (current financial health), and end (future outlook).
+    ### Structure of the Story:
 
-        ### Story Structure:
-        - **Introduction**: Brief overview of the company and why it matters to investors.
-        - **Financial Journey**: How the company has managed its finances over time.
-        - **Current Position**: The company's financial health right now, highlighting strengths and weaknesses.
-        - **Growth Story**: The company's potential for future expansion and areas of opportunity.
-        - **Risk Narrative**: Key challenges and threats the company faces.
-        - **Conclusion**: Final assessment of the company as an investment opportunity.
+    #### 1. **The Rise and Challenges of {ticker_mapping.get(ticker, ticker)}**
+    - Introduce the company, its founders, and its early success.
+    - Highlight its rapid growth and how it gained investor and customer confidence.
+    - Set up the premise of challenges that emerged despite its success.
 
-        ### Guidelines:
-        - Be honest about both strengths and weaknesses.
-        - Use storytelling techniques like metaphors, analogies, and examples.
-        - Focus on the most important insights rather than listing every detail.
-        - Create a balanced view that helps readers form their own opinion.
-        - Write in a conversational, engaging tone.
+    #### 2. **The Growth Strategy: Risky or Rewarding?**
+    - Analyze whether the company’s growth is sustainable or overly aggressive.
+    - Compare its revenue growth and market presence to industry averages.
 
-        The final output should read like an engaging article that anyone can understand, bringing financial numbers to life through storytelling.
+    ✅ **What Went Well:**  
+    - Strong revenue growth, expanding market presence, increasing investor confidence.
+
+    ❌ **Red Flags:**  
+    - High debt levels or over-reliance on risky sectors.  
+    - Aggressive expansion strategies that may backfire.
+
+    #### 3. **Financial Stability & Warning Signs**
+    - Evaluate if reported financials match reality or if warning signs exist.
+    - Analyze how the company manages bad loans, debt, and financial risks.
+
+    ✅ **What Went Well:**  
+    - Strong reported earnings, low declared bad loans.
+
+    ❌ **Red Flags:**  
+    - Frequent loan restructuring instead of recognizing losses.  
+    - Low reserves for bad loans compared to industry standards.  
+
+    #### 4. **Leadership & Governance Issues**
+    - Assess whether leadership decisions support long-term stability.
+    - Identify governance concerns, management turnover, and oversight weaknesses.
+
+    ✅ **What Went Well:**  
+    - Strong leadership presence, ambitious expansion.
+
+    ❌ **Red Flags:**  
+    - Over-concentration of power in leadership.  
+    - High turnover in senior management, indicating instability.
+
+    #### 5. **Revenue & Profitability Trends**
+    - Evaluate the company’s income sources and profitability trends.
+    - Identify whether earnings are sustainable or artificially inflated.
+
+    ✅ **What Went Well:**  
+    - Consistent revenue growth, positive quarterly earnings.
+
+    ❌ **Red Flags:**  
+    - Over-reliance on non-core income like fees and commissions.  
+    - Declining profit margins in core business operations.
+
+    #### 6. **Market Perception & Investor Confidence**
+    - Examine investor sentiment, stock performance, and financial stability.
+    - Highlight discrepancies between stock valuation and actual financial health.
+
+    ✅ **What Went Well:**  
+    - Strong stock market valuation, optimistic investor sentiment.
+
+    ❌ **Red Flags:**  
+    - High promoter pledging of shares, indicating financial stress.  
+    - Stock price may be overvalued compared to real financial health.
+
+    ### **Final Verdict**
+    - Conclude whether the company is truly strong or facing hidden risks.
+    - Provide an overall assessment of financial stability, governance, and risk management.
+
+    📌 **Key Takeaway:** Investors should focus beyond headline growth and assess financial discipline, governance, and risk before making investment decisions.
+   
         """
         
         # Initialize the Groq client with the API key from environment variables

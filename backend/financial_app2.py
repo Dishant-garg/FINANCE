@@ -105,7 +105,7 @@ def generate_analysis(ticker):
         return None
         
     try:
-        # Use asyncio.run to handle async functions
+        
         analyses = asyncio.run(article_generator.ArticleGeneratorService.generate_company_analysis(ticker))
         visualizations = asyncio.run(viz.VisualizationService.get_stock_visualizations(ticker))
         
@@ -117,7 +117,7 @@ def generate_analysis(ticker):
         st.error(f"Error generating analysis for {ticker}: {str(e)}")
         return None
 
-def handle_chat_interaction(ticker, user_input):
+async def handle_chat_interaction(ticker, user_input):
     """Handle chat interaction with error logging."""
     if not ADVANCED_FEATURES_AVAILABLE:
         return "Advanced chat features are not available."
@@ -127,7 +127,8 @@ def handle_chat_interaction(ticker, user_input):
             company=ticker,
             messages=[chatting.ChatMessage(role="user", content=user_input)]
         )
-        response = chat.ChatResponseService.chat_response(chat_history)
+        response = await chat.ChatResponseService.chat_response(chat_history)
+        print(response)
         
         # Store conversation in session
         st.session_state.chat_history.append(("user", user_input))
@@ -437,7 +438,7 @@ def ai_analysis_page():
                 
                 # Display educational resources if available
                 display_educational_resources(ticker)
-
+# Fix the chat_page function - make it non-async and handle async calls properly
 def chat_page():
     """Page for AI Financial Analyst Chat."""
     st.title("💬 Chat with AI Financial Analyst")
@@ -454,11 +455,18 @@ def chat_page():
     ticker = get_ticker_dropdown(st.session_state.get('selected_ticker', ''))
     
     if not ticker:
-        st.warning("Please enter a stock ticker to start the conversation.")
+        st.warning("Please select a stock ticker to start the conversation.")
         return
     
     # Set current ticker
     st.session_state.current_ticker = ticker
+    
+    # Initialize chat history if needed
+    if 'chat_history' not in st.session_state:
+        st.session_state.chat_history = []
+    
+    # Display current company
+    st.info(f"Currently analyzing: {ticker} - {TICKER2_MAPPING.get(ticker, ticker)}")
     
     # Generate initial analysis if needed
     if 'analyses' not in st.session_state or not st.session_state.analyses:
@@ -473,18 +481,56 @@ def chat_page():
     # Chat interface
     user_input = st.text_input("Ask your question:", key="ai_chat_input")
     
-    if user_input:
+    if st.button("Send") and user_input:
         with st.spinner("💡 Analyzing..."):
-            response = handle_chat_interaction(st.session_state.current_ticker, user_input)
-            if response:
-                st.success("Response generated!")
+            # Note: we're using asyncio.run to handle the async function
+            if ADVANCED_FEATURES_AVAILABLE:
+                try:
+                    # Add user message to history first
+                    st.session_state.chat_history.append(("user", user_input))
+                    
+                    # Run the async function
+                    response = asyncio.run(handle_chat_interaction(ticker, user_input))
+                    
+                    # If response was handled by the function, we don't need to add it again
+                    # The function already adds it to chat_history
+                    
+                    st.success("Response generated!")
+                    st.rerun()  # Force a rerun to show the updated chat
+                except Exception as e:
+                    st.error(f"Error: {str(e)}")
+                    # Add a fallback response
+                    fallback = f"I apologize, but I encountered a technical issue. Please try again with a different question."
+                    st.session_state.chat_history.append(("analyst", fallback))
+            else:
+                # Fallback for when advanced features aren't available
+                st.session_state.chat_history.append(("user", user_input))
+                fallback = f"I'm a simulated financial analyst. The advanced AI features aren't available currently."
+                st.session_state.chat_history.append(("analyst", fallback))
+                st.rerun()
     
     # Display chat history
-    display_chat_history()
-    
-    # Visualization sidebar
-    display_visualizations()
+    if st.session_state.chat_history:
+        st.markdown("### Conversation")
+        for i, (role, message) in enumerate(st.session_state.chat_history):
+            if role == "user":
+                # st.markdown(f"""
+                # <div style="background-color: #e6f7ff; padding: 10px; border-radius: 10px; margin-bottom: 10px; text-align: right;">
+                #     <strong>You:</strong> {message}
+                # </div>
+                # """, unsafe_allow_html=True)
+                st.markdown(message)
+            else:
+                # st.markdown(f"""
+                # <div style="background-color: #f0f2f6; padding: 10px; border-radius: 10px; margin-bottom: 10px;">
+                #     <strong>Financial Analyst:</strong> {message}
+                # </div>
+                # """, unsafe_allow_html=True)
+                st.markdown(message)
+    else:
+        st.info("No conversation yet. Ask a question to get started!")
 
+# Fix the main function - make it non-async
 def main():
     # Initialize session state
     initialize_session_state()
@@ -537,7 +583,7 @@ def main():
     elif selected == "AI Analysis":
         ai_analysis_page()
     elif selected == "Chat Assistant":
-        chat_page()
+        chat_page()  # No longer async
 
 if __name__ == "__main__":
-    main()
+    main()  # Regular function call, not async

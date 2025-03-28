@@ -35,7 +35,11 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
-
+TICKER2_MAPPING = {
+        "HDB": "HDFC Bank",
+        "INFY": "Infosys",
+        "LICI.NS": "LIC India"
+}
 def get_ticker_dropdown(default_value=''):
     """
     Create a dropdown for selecting stock tickers with predefined options.
@@ -213,7 +217,7 @@ def home_page():
     featured_tickers = ["HDB", "LICI.NS", "INFY"]
     for i, ticker in enumerate(featured_tickers):
         with locals()[f"col{i+1}"]:
-            if st.button(f"{ticker} - {TICKER_MAPPING.get(ticker, ticker)}"):
+            if st.button(f"{ticker} - {TICKER2_MAPPING.get(ticker, ticker)}"):
                 st.session_state.selected_ticker = ticker
                 st.rerun()
 
@@ -232,7 +236,7 @@ def balance_sheet_page():
                 with open(f"{ticker}_balance_sheet_analysis.txt", "r") as file:
                     analysis = file.read()
                 
-                st.success(f"Balance Sheet Analysis for {TICKER_MAPPING.get(ticker, ticker)}")
+                st.success(f"Balance Sheet Analysis for {TICKER2_MAPPING.get(ticker, ticker)}")
                 st.markdown(analysis)
             
             except Exception as e:
@@ -253,7 +257,7 @@ def cash_flow_page():
                 with open(f"{ticker}_cash_flow_analysis.txt", "r") as file:
                     analysis = file.read()
                 
-                st.success(f"Cash Flow Analysis for {TICKER_MAPPING.get(ticker, ticker)}")
+                st.success(f"Cash Flow Analysis for {TICKER2_MAPPING.get(ticker, ticker)}")
                 st.markdown(analysis)
             
             except Exception as e:
@@ -274,7 +278,7 @@ def financials_page():
                 with open(f"{ticker}_financials_analysis.txt", "r") as file:
                     analysis = file.read()
                 
-                st.success(f"Financial Performance Analysis for {TICKER_MAPPING.get(ticker, ticker)}")
+                st.success(f"Financial Performance Analysis for {TICKER2_MAPPING.get(ticker, ticker)}")
                 st.markdown(analysis)
             
             except Exception as e:
@@ -295,7 +299,7 @@ def key_stats_page():
                 with open(f"{ticker}_key_stats_analysis.txt", "r") as file:
                     analysis = file.read()
                 
-                st.success(f"Key Statistics Analysis for {TICKER_MAPPING.get(ticker, ticker)}")
+                st.success(f"Key Statistics Analysis for {TICKER2_MAPPING.get(ticker, ticker)}")
                 st.markdown(analysis)
             
             except Exception as e:
@@ -364,7 +368,7 @@ def company_story_page():
                         continue
                 
                 if story:
-                    st.success(f"Company Story for {TICKER_MAPPING.get(ticker, ticker)}")
+                    st.success(f"Company Story for {TICKER2_MAPPING.get(ticker, ticker)}")
                     st.markdown(story)
                 else:
                     st.error(f"Could not find company story file for {ticker}. Please check file paths.")

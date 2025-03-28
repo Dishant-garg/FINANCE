@@ -392,9 +392,7 @@ def ai_analysis_page():
     including financial reports, technical analysis, and business overviews.
     """)
     
-    ticker = st.text_input("Enter Stock Ticker", 
-                           value=st.session_state.get('selected_ticker', ''),
-                           placeholder="e.g., AAPL, GOOGL")
+    ticker = get_ticker_dropdown(st.session_state.get('selected_ticker', ''))
     
     if st.button("Generate AI Analysis") and validate_ticker(ticker):
         with st.spinner("🧠 Generating comprehensive analysis..."):
@@ -453,10 +451,7 @@ def chat_page():
     and get expert insights and explanations.
     """)
     
-    # Select or enter ticker
-    ticker = st.text_input("Enter Stock Ticker", 
-                           value=st.session_state.get('selected_ticker', ''),
-                           placeholder="e.g., AAPL, GOOGL")
+    ticker = get_ticker_dropdown(st.session_state.get('selected_ticker', ''))
     
     if not ticker:
         st.warning("Please enter a stock ticker to start the conversation.")
